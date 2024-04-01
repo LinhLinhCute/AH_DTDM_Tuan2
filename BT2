@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <math.h>
+
+// Hàm kiểm tra số chính phương
+int KiemTra(int num) {
+    int squareRoot = sqrt(num);
+    return (squareRoot * squareRoot == num);
+    
+}
+
+// Hàm đếm và in ra các số chính phương nhỏ hơn n
+void HamDem(int n) {
+    printf("Cac so chinh phuong nho hon %d la:\n", n);
+    for (int i = 1; i < n; i++) {
+        if (KiemTra(i)) {
+            printf("%d ", i);
+        }
+    }
+    printf("\n");
+}
+
+int main() {
+    int n;
+    printf("Nhap so nguyen duong n: ");
+    scanf("%d", &n);
+
+    HamDem(n);
+
+    return 0;
+}
+
