@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+void BoiSoCua7(int start, int end) {
+    printf("Các số nguyên có 2 chữ số và là bội của 7:\n");
+    for (int i = start; i <= end; i++) {
+        if (i % 7 == 0 && i >= 10 && i <= 99) {
+            printf("%d ", i);
+        }
+    }
+}
+
+int main() {
+    int start = 10; // Bắt đầu từ số 10 (số đầu tiên có 2 chữ số)
+    int end = 99;   // Kết thúc ở số 99 (số cuối cùng có 2 chữ số)
+
+    BoiSoCua7(start, end);
+
+    return 0;
+}
